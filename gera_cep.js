@@ -12,7 +12,6 @@ module.exports = async function buscacep(estado, cidade) {
   await page.select('#cep_estado', estado.toUpperCase());
   await delay(200)
   await page.select('#cep_cidade', cidade);
-  await page.screenshot({ path: 'teste.png' })
   await page.click('#btn_gerar_cep')
   await delay(200)
 
