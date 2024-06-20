@@ -2,9 +2,7 @@ FROM ghcr.io/puppeteer/puppeteer:22.11.2
 
 ENV PUPPERTEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPERTEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
-
-EXPOSE 4000
-
+    
 WORKDIR /usr/src/app
 
 COPY package*.json ./
