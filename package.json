@@ -1,15 +1,17 @@
 {
   "name": "teste-api",
   "version": "1.0.0",
-  "main": "cypress.mjs",
-  "type": "module",
+  "main": "gera_ceps.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kleber de Andrade",
   "license": "ISC",
-  "description": "",
   "dependencies": {
+    "express": "^4.19.2",
     "puppeteer": "^22.11.0"
-  }  
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
 }

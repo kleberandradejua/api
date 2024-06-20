@@ -1,10 +1,10 @@
-import puppeteer from 'puppeteer';
+const puppeteer = require('puppeteer')
 
 const delay = (delayInms) => {
   return new Promise(resolve => setTimeout(resolve, delayInms));
 };
 
-async function buscacep(estado, cidade) {
+module.exports = async function buscacep(estado, cidade) {
 
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage()
@@ -20,6 +20,6 @@ async function buscacep(estado, cidade) {
   console.log(cep)
   
   await browser.close();  
+  return cep;
 }
 
-buscacep('RN', '7148')
