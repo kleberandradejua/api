@@ -1,4 +1,4 @@
-FROM ghcr.io/puppeteer/puppeteer:22.11.2
+FROM nginx
 EXPOSE 80
 
 ENV PUPPERTEER_SKIP_CHROMIUM_DOWNLOAD=true \
