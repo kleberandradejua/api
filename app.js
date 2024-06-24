@@ -1,7 +1,7 @@
 const buscaCep = require('./gera_cep.js');
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 10546;
 
 app.get('/', (req, res) => {
     res.send('hello world!')

@@ -1,6 +1,6 @@
 FROM ghcr.io/pupperteer/pupperteer:22.11.2
 
-EXPOSE 10000
+EXPOSE 10546
 
 ENV PUPPERTEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPERTEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
