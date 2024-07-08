@@ -5,8 +5,13 @@ const delay = (delayInms) => {
 };
 
 module.exports = async function buscacep(estado, cidade) {
+ 
+  const browser = await puppeteer.launch({
+    headless: true,
+    executablePath: '/usr/bin/google-chrome', // Caminho para o Chrome instalado
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 
-  const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage()
   await page.goto('https://www.4devs.com.br/gerador_de_cep');
   await page.select('#cep_estado', estado.toUpperCase());
@@ -17,8 +22,8 @@ module.exports = async function buscacep(estado, cidade) {
 
   const cep = await page.$eval('#cep', el => el.innerText);
   console.log(cep)
-  
-  await browser.close();  
+
+  await browser.close();
   return cep;
 }
 
