@@ -1,7 +1,7 @@
 const buscaCep = require('./gera_cep.js');
 const express = require('express')
 const app = express()
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 10000;
 
 app.get('/', async (req, res) => {
     res.send(await buscaCep(req.query.uf, req.query.cod_cidade))
