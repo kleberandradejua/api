@@ -1,7 +1,7 @@
 # render.yaml
 services:
   - type: web
-    name: gera_cep-api
+    name: gerador-cep-api
     env: node
     region: oregon
     plan: free
