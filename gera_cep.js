@@ -1,4 +1,6 @@
 const puppeteer = require('puppeteer')
+const executablePath = process.env.CHROME_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
+
 
 const delay = (delayInms) => {
   return new Promise(resolve => setTimeout(resolve, delayInms));
@@ -8,7 +10,7 @@ module.exports = async function buscacep(estado, cidade) {
  
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: '/usr/bin/google-chrome-stable', // Caminho para o Chrome instalado
+    executablePath: executablePath,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
