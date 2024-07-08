@@ -28,4 +28,4 @@ RUN apt-get update && apt-get install gnupg wget -y && \
  COPY package*.json ./
  RUN npm i
  COPY . .
- CMD ["node", "index"]
+ CMD ["node", "app.js"]
