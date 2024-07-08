@@ -1,0 +1,9 @@
+# render.yaml
+services:
+  - type: web
+    name: gera_cep-api
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
