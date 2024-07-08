@@ -1,7 +1,8 @@
-# FROM ghcr.io/pupperteer/pupperteer:22.11.2
+FROM ghcr.io/pupperteer/pupperteer:19.7.2
 
-# ENV PUPPERTEER_SKIP_CHROMIUM_DOWNLOAD=true \
-#     PUPPERTEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+# We don't need the standalone Chromium
+ENV PUPPERTEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPERTEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
     
 # WORKDIR /usr/src/app
 
@@ -11,10 +12,7 @@
 # CMD ["node", "app.js"]
 
 
-FROM node:slim
-
-# We don't need the standalone Chromium
-ENV CHROME_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+#FROM node:slim
 
 # Install Google Chrome Stable and fonts
 # Note: this installs the necessary libs to make the browser work with Puppeteer.
@@ -30,4 +28,4 @@ RUN apt-get update && apt-get install gnupg wget -y && \
  COPY package*.json ./
  RUN npm i
  COPY . .
- CMD ["node", "app.js"]
+ CMD ["node", "index"]

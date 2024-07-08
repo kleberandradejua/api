@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer')
-const executablePath = process.env.CHROME_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
+require("dontenv").config()
+const executablePath = process.env.PUPPERTEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
 
 
 const delay = (delayInms) => {
@@ -11,7 +12,11 @@ module.exports = async function buscacep(estado, cidade) {
   const browser = await puppeteer.launch({
     headless: true,
     executablePath: executablePath,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: [
+      "--disable-setuid-sandbox",
+      "--no-sandbox",
+      "--single-process",
+      "--no-zygote",],
   });
 
   const page = await browser.newPage()
