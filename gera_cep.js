@@ -8,7 +8,7 @@ module.exports = async function buscacep(estado, cidade) {
  
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: '/usr/alternatives/google-chrome-stable', // Caminho para o Chrome instalado
+    executablePath: '/usr/bin/google-chrome-stable', // Caminho para o Chrome instalado
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
