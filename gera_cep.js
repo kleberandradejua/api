@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer')
-require("dontenv").config()
+require("dotenv").config()
 const executablePath = process.env.PUPPERTEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
 
 
