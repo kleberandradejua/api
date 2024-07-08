@@ -2,7 +2,7 @@ FROM ghcr.io/pupperteer/pupperteer:22.11.2
 
 # We don't need the standalone Chromium
 ENV PUPPERTEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPERTEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable \
+    PUPPERTEER_EXECUTABLE_PATH=/usr/bin/chromium-browser \
     CHROME_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
 
 # Install Google Chrome Stable and fonts
