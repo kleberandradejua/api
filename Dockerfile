@@ -1,4 +1,4 @@
-FROM ghcr.io/pupperteer/pupperteer:19.7.2
+FROM ghcr.io/pupperteer/pupperteer:21.6.0
 
 # We don't need the standalone Chromium
 ENV PUPPERTEER_SKIP_CHROMIUM_DOWNLOAD=true \
