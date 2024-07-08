@@ -18,8 +18,6 @@ module.exports = async function buscacep(estado, cidade) {
     args: [
       "--disable-setuid-sandbox",
       "--no-sandbox",
-      "--single-process",
-      "--no-zygote",
     ],
   });
 
