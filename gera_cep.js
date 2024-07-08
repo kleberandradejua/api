@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 require("dotenv").config()
-const executablePath = process.env.PUPPERTEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
+const executablePath = process.env.CHROME_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable';
 
 
 const delay = (delayInms) => {
