@@ -11,5 +11,4 @@ app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`)
 })
 
-/*
-res.send(await buscaCep(req.query.uf, req.query.cod_cidade))*/
+res.send(await buscaCep(req.query.uf, req.query.cod_cidade))
